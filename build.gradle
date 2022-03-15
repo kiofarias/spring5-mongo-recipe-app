@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.4'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'jacoco'
 }
 
 group = 'guru.springframework'
@@ -34,12 +35,6 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 //export test coverage
-
-apply plugin: "jacoco"
-
-jacoco {
-	toolVersion = '0.8.1'
-}
 
 jacocoTestReport {
     reports {
